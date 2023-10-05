@@ -122,3 +122,13 @@
 # print("Есть совпадение 'a=11 '?", string.find("a=11 ") != -1)
 # print("Есть совпадение 'b=12 '?", string.find("b=12 ") != -1)
 # print("Есть совпадение 'h=113'?", string.find("h=113") != -1)
+
+def squarePrym(a,b):
+    return a*b
+stroke = input('шаблон')
+stroke.strip().lower()
+if stroke.find('прямоугольник') != -1:
+    if stroke.find('площадь') != -1:
+        a = int(stroke[stroke.find('a')+2:stroke.find('b')])
+        b = int(stroke[stroke.find('b')+2:])
+        print(squarePrym(a, b))
